@@ -11,18 +11,23 @@ namespace masodikfeladat
         static void Main(string[] args)
         {
             int szam = 0;
-            int i = 0;
-            int[] tomb = new int[10];
-            Console.WriteLine("irj be egy számot:");
-            szam = Convert.ToInt32(Console.ReadLine());
+            int max = 0;
 
-            while (szam != 0)
+            do
             {
                 Console.WriteLine("irj be egy számot:");
                 szam = Convert.ToInt32(Console.ReadLine());
-                tomb[i] = szam;
+                if (max < szam)
+                {
+                    max = szam;
+                }
             }
-            Console.WriteLine("A legnagyobb szám: {0}", tomb.Max());
+            while (szam != 0);
+            
+            {
+                
+            }
+            Console.WriteLine("A legnagyobb szám: {0}", max);
 
             Console.ReadKey();
         }
