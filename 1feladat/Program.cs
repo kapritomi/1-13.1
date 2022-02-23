@@ -11,7 +11,7 @@ namespace _1feladat
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int N = rnd.Next(5, 10), paros=0, paratlan=0;
+            int N = rnd.Next(5, 10), paros=0, paratlan=0, paratlanosszeg= 0;
             int[] tomb = new int[N];
 
 
@@ -26,10 +26,12 @@ namespace _1feladat
                 else
                 {
                     paratlan++;
+                    paratlanosszeg = paratlanosszeg + tomb[i];
                 }
             }
             Console.WriteLine("{0} páros szám van",paros);
             Console.WriteLine("{0} páratlan szám van",paratlan);
+            Console.WriteLine("A páratlan számok összege: {0}",paratlanosszeg);
 
             Console.ReadKey();
         }
