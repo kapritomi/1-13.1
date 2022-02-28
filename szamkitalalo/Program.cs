@@ -91,13 +91,11 @@ namespace szamkitalalo
                 Console.WriteLine("Folytatjuk a játékot?");
                 
                 while(Console.ReadKey().KeyChar == 'i');
-                {
-
-                }
+                Console.ReadKey();
             }
            
 
-            Console.ReadKey();
+            
         }
     }
 }
