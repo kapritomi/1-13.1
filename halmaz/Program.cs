@@ -9,38 +9,43 @@ namespace halmaz
 
     class Halmaz
     {
+        Random rnd = new Random();
+         int szam;
+         int[] a;
+         int[] b;
+
         public Halmaz()
         {
-
+            beker();
         }
         public void beker() 
         {
-            
-            int szam;
-            Random rnd = new Random();
             Console.WriteLine("Számot:");
-            szam = Convert.ToInt32(Console.ReadLine());
-
-            if (szam > 200)
+            this.szam = Convert.ToInt32(Console.ReadLine());
+        }
+        public void feltolt()
+        {
+            if (this.szam > 200)
             {
-                szam = rnd.Next(100, 201);
+                this.szam = rnd.Next(100, 201);
             }
-            int[] a = new int[szam];
-            int[] b = new int[szam];
+             a = new int[this.szam];
+             b = new int[this.szam];
 
             for (int i = 0; i < a.Length; i++)
             {
                 a[i] = rnd.Next(-100, 100);
-                Console.WriteLine("a tomb: {0}", a[i]);
+                Console.WriteLine("A halmaz elemei: {0}", this.a[i]);
             }
 
             for (int i = 0; i < b.Length; i++)
             {
                 b[i] = rnd.Next(-100, 100);
-                Console.WriteLine("b tomb: {0}",b[i]);
+                Console.WriteLine("B halmaz elemei: {0}",this.b[i]);
             }
-
-            Console.WriteLine("a-b");
+        }    
+        public void csakaza()
+        {
             int counter=0;
             List<int> nemismetlodo = new List<int>();
 
@@ -64,15 +69,15 @@ namespace halmaz
 	            {
                     Console.WriteLine(item);
 	            }
-            
-
-            Console.WriteLine("b-a");
+        }
+        public void csakab()
+        {
             int counter1=0;
             List<int> nemismetlodo1 = new List<int>();
 
-                for (int i = 0; i < a.Length; i++)
+                for (int i = 0; i < b.Length; i++)
 			    {
-                    for (int j = 0; j < b.Length; j++)
+                    for (int j = 0; j < a.Length; j++)
 			        {
                         if(b[i] != a[j])
                         {
@@ -81,7 +86,7 @@ namespace halmaz
 			        }
                     if(counter1 == a.Length)
                     {
-                        nemismetlodo1.Add(a[i]);
+                        nemismetlodo1.Add(b[i]);
 
                     }
                     counter1 = 0;
@@ -90,21 +95,26 @@ namespace halmaz
 	            {
                     Console.WriteLine(item);
 	            }
-
-                for (int i = 0; i < a.Length; i++)
+        }
+        public void metszet()
+        {
+            for (int i = 0; i < a.Length; i++)
 			    {
                     for (int j = 0; j < b.Length; j++)
 			        {
                         if(a[i] == b[j])
                         {
-                            Console.WriteLine();
+                            Console.WriteLine("metszet: {0}",a[i]);
                         }
+                       
 			        }
 			    }
-
-
         }
-       
+        public void unio()
+        {
+             var unio = a.Union(b);
+             Console.WriteLine(String.Join(", ",unio));
+        } 
     }
     class Program
     {
@@ -112,7 +122,16 @@ namespace halmaz
         {
             Halmaz h = new Halmaz();
 
-            h.beker();
+           
+            h.feltolt();
+            Console.WriteLine("Csak az A halmaz elemei:");
+            h.csakaza();
+            Console.WriteLine("Csak a B halmaz elemei:");
+            h.csakab();
+            Console.WriteLine("A metszet elemei:");
+            h.metszet();
+            Console.WriteLine("Az unió elemei:");
+            h.unio();
 
 
             Console.ReadKey();
