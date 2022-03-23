@@ -18,6 +18,7 @@ namespace homerseklet
             int nap;
             int min = 0;
             int max = 0;
+            double hoatlag = 0;
 
             Dictionary<string, int> honapok = new Dictionary<string, int> {
                 {"Január", 1 },{"Február", 2},{"Március", 3},
@@ -33,11 +34,11 @@ namespace homerseklet
             {
                 for (int i = 0; i < a.GetLength(0); i++)
 			    {
-                    a[i,0] = rnd.Next(-10,0);
-                    a[i,1] = rnd.Next(0,20);
+                    a[i,0] = rnd.Next(-2,10);
+                    a[i,1] = rnd.Next(10,28);
 			    }
                 double atlag = (a[nap,0]+a[nap,1])/2;
-                Console.WriteLine("Este: {0} Nappal: {1} Átlag: {2}",a[nap,0],a[nap,1],atlag);
+                Console.WriteLine("NAPI: Min: {0} Max: {1} Átlag: {2}",a[nap,0],a[nap,1],atlag);
                 
                 for (int i = 0; i < a.GetLength(0); i++)
 			    {
@@ -48,12 +49,21 @@ namespace homerseklet
 			    }
                 for (int i = 0; i < a.GetLength(0); i++)
 			    {
-                    if(a[i,0] < max)
+                    if(a[i,1] > max)
                     {
                         max = a[i,1];
                     }
 			    }
-                Console.WriteLine("Este: {0} Nappal: {1} ",min,max);
+                for (int i = 0; i < a.GetLength(0); i++)
+			    {
+                    hoatlag = hoatlag +a[i,0];
+                    hoatlag = hoatlag + a[i,1];
+			    }
+                hoatlag = hoatlag/ (a.Length*2);
+                Console.WriteLine("HAVI: Min: {0} Max: {1} Átlag: {2}",min,max,Math.Round(hoatlag,2));
+           
+
+
             }
             
 
