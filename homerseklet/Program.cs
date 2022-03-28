@@ -62,8 +62,6 @@ namespace homerseklet
                 hoatlag = hoatlag/ (a.Length*2);
                 Console.WriteLine("HAVI: Min: {0} Max: {1} Átlag: {2}",min,max,Math.Round(hoatlag,2));
            
-
-
             }
             
 
