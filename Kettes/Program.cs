@@ -13,7 +13,7 @@ namespace Kettes
         int[] a = new int[] {128,64,32,16,8,4,2,1};
         public Kettes(int szam) 
         {
-            this.szam = szam;
+            this.szam = szam; 
             this.binaris = "";
         }
         public void szamolo()
