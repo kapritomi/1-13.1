@@ -46,7 +46,7 @@ namespace Szamrendszer
         }
         public void szamol()
         {
-            Console.WriteLine(string.Format("{0:x}", szam1));
+            Console.WriteLine(string.Format("{0:x}", this.szam1));
         }
      }
      class Oct
@@ -57,7 +57,7 @@ namespace Szamrendszer
         {
             this.szam2 = szam2;
         }
-     public void szamolas()
+        public void szamolas()
         {
             this.quot = this.szam2;
               while (this.quot!= 0) {
