@@ -18,8 +18,6 @@ namespace Fibonacci
                 Console.WriteLine(a[i]);
             }
         }
-
-    
     }
 
     class Program
@@ -28,7 +26,6 @@ namespace Fibonacci
         {
             Fibo f = new Fibo();
             f.fi();
-
             Console.ReadKey();
         }
     }
