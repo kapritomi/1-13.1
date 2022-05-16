@@ -39,7 +39,7 @@ namespace Városok
         {
             foreach (var item in this.varosok)
             {
-                Console.WriteLine(item + ",");
+                Console.Write(item + ",");
             }
         }
         public void getVan()
