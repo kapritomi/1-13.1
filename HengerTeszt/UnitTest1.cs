@@ -7,8 +7,6 @@ namespace HengerTeszt
     [TestClass]
     public class UnitTest1
     {
-        
-        
         [TestMethod]
         public void TestMethod1()
         {
@@ -19,7 +17,7 @@ namespace HengerTeszt
             double kapottEredm = H.getKerulet();
 
             Assert.AreEqual(vartEredm,kapottEredm);
-
         }
+      
     }
 }
