@@ -82,9 +82,7 @@ namespace Városok
         {
             this.varosok.RemoveAt(this.varosok.Count - 1);
         }
-        
     }
-
 
     class Program
     {
