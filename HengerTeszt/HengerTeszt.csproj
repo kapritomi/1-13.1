@@ -5,6 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A19163EF-4C21-4BCB-823E-ECD1B0D5CD57}</ProjectGuid>
     <ProjectGuid>{E5EB90ED-0043-4D48-B49D-E8216E275C2C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -57,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Henger\Henger.csproj">
-      <Project>{dd894503-5b4a-4072-9a7d-fa3693a6ccd9}</Project>
       <Name>Henger</Name>
     </ProjectReference>
   </ItemGroup>

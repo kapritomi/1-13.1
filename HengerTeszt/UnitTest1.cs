@@ -11,7 +11,14 @@ namespace HengerTeszt
         [TestMethod]
         public void TestMethod1()
         {
+            Hengerr H = new Hengerr();
 
+            double vartEredm = 31.42;
+
+            double kapottEredm = H.getKerulet();
+
+            Assert.AreEqual(vartEredm,kapottEredm);
         }
+      
     }
 }
