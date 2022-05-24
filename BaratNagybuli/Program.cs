@@ -90,8 +90,13 @@ namespace BaratNagybuli
                 }
             }
         }
+        static void kiir()
+        {
+            var firstFiveItems = Barat.Take(15);
+            Console.WriteLine(firstFiveItems);
+        }
 
-
+}
     internal class Program
     {
         static void Main(string[] args)
@@ -101,4 +106,5 @@ namespace BaratNagybuli
             bl.Kiir();
         }
     }
+
 }
