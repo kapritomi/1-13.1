@@ -40,5 +40,10 @@ namespace labelszoveg
                 
             }
         }
+
+        private void lblfull_MouseClick_1(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

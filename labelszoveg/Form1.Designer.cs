@@ -34,13 +34,13 @@ namespace labelszoveg
             // 
             // lblfull
             // 
-            this.lblfull.AutoSize = true;
             this.lblfull.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblfull.Location = new System.Drawing.Point(0, 0);
             this.lblfull.Name = "lblfull";
-            this.lblfull.Size = new System.Drawing.Size(24, 13);
+            this.lblfull.Size = new System.Drawing.Size(800, 450);
             this.lblfull.TabIndex = 0;
             this.lblfull.Text = "asd";
+            this.lblfull.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblfull_MouseClick);
             // 
             // Form1
             // 
@@ -52,7 +52,6 @@ namespace labelszoveg
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
