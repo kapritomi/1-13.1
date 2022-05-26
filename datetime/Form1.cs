@@ -30,8 +30,17 @@ namespace datetime
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ev = Convert.ToInt32(numericUpDown1.Value + dtpicker.Value.Year);
-            label1.Text = string.Format("{0}.", ev);
+            
+            dtpicker.Value.AddYears((int)numericUpDown1.Value);
+            dtpicker.Value.AddMonths((int)numericUpDown7.Value);
+            dtpicker.Value.AddDays((int)numericUpDown8.Value);
+            dtpicker.Value.AddHours((int)numericUpDown2.Value);
+            dtpicker.Value.AddMinutes((int)numericUpDown3.Value);
+            dtpicker.Value.AddSeconds((int)numericUpDown4.Value);
+
+             ev = Convert.ToInt32(numericUpDown1.Value + dtpicker.Value.Year);
+             honap = Convert.ToInt32(numericUpDown7.Value + dtpicker.Value.Month);
+             label1.Text = string.Format("{0}. {1}.", ev,honap);
         }
     }
 }
