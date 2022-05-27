@@ -18,13 +18,13 @@ namespace kalkulátor
         public void beker()
         {
             Console.WriteLine("Add meg a számot:");
-            szam1 = 10.0;
+            szam1 = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Add meg a másik számot:");
-            szam2 = 10.0;
+            szam2 = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Add meg a műveletjelet:");
-            muv = '-';
+            muv = Convert.ToChar(Console.ReadLine());
         }
 
         public double muvelet()
