@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace sziget
 {
-    class Program
+    public class Sziget
     {
-        static void Main(string[] args)
+        int islandCount = 0;
+        int maxIslandLength = 0;
+        int i = 0;
+        string data = "010111110000101";
+
+        public Sziget() { }
+
+        public int szigetszam()
         {
-            int islandCount = 0;
-            int maxIslandLength = 0;
-            int i = 0;
-            string data = "010111110000101";
-            
             while (i < data.Length)
             { 
                 if (data[i] == '1') 
@@ -28,9 +30,7 @@ namespace sziget
                         ++j;
                         ++tmp;
                     }
-
                     i = j;
-
                     if (tmp > maxIslandLength) 
                     { 
                         maxIslandLength = tmp; 
@@ -39,11 +39,47 @@ namespace sziget
                 { 
                     ++i;
                 } 
-
             }
-            Console.WriteLine("Szigetek száma: {0}", islandCount);
-            Console.WriteLine("Legnagyobb sziget: {0}", maxIslandLength);
-            Console.WriteLine(i);
+            return islandCount; 
+        }
+
+        public int szigethossz()
+        {
+            while (i < data.Length)
+            { 
+                if (data[i] == '1') 
+                { 
+                    ++islandCount;
+                    int j = i;
+                    int tmp = 0;
+
+                    while (j < data.Length && data[j] == '1')
+                    { 
+                        ++j;
+                        ++tmp;
+                    }
+                    i = j;
+                    if (tmp > maxIslandLength) 
+                    { 
+                        maxIslandLength = tmp; 
+                    }
+                } else 
+                { 
+                    ++i;
+                } 
+            }
+            return maxIslandLength; 
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Sziget s = new Sziget();
+            Console.WriteLine(s.szigethossz());
+            Console.WriteLine(s.szigetszam());
+
             Console.ReadKey();
         }
     }
