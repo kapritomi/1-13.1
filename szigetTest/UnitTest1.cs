@@ -13,11 +13,8 @@ namespace szigetTest
             Sziget s = new Sziget();
             int varteredmeny = 5;
             int kapotteredmeny = s.szigethossz();
-            int varteredmeny1 = 4;
-            int kapotteredmeny1 = s.szigetszam();
 
             Assert.AreEqual(varteredmeny, kapotteredmeny);
-            Assert.AreEqual(varteredmeny1, kapotteredmeny1);
         }
 
         [TestMethod]
@@ -28,6 +25,26 @@ namespace szigetTest
             int kapotteredmeny1 = s.szigetszam();
 
             Assert.AreEqual(varteredmeny1, kapotteredmeny1);
+        }
+
+        [TestMethod]
+        public void TestMethod3()
+        {
+            Sziget s = new Sziget();
+            int varteredmeny = 5;
+            int kapotteredmeny = s.szigethossz();
+
+            Assert.AreNotEqual(varteredmeny, kapotteredmeny);
+        }
+
+        [TestMethod]
+        public void TestMethod4()
+        {
+            Sziget s = new Sziget();
+            int varteredmeny1 = 4;
+            int kapotteredmeny1 = s.szigetszam();
+
+            Assert.AreNotEqual(varteredmeny1, kapotteredmeny1);
         }
     }
 }
