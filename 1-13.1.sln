@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labelszoveg", "labelszoveg\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datetime", "datetime\datetime.csproj", "{4C26C3E3-89FE-4F3F-A290-5BF8BC40D2E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "valamiform2", "valamiform2\valamiform2.csproj", "{75D013B7-EC50-42B8-A718-BDC48D514A59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4C26C3E3-89FE-4F3F-A290-5BF8BC40D2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C26C3E3-89FE-4F3F-A290-5BF8BC40D2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C26C3E3-89FE-4F3F-A290-5BF8BC40D2E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D013B7-EC50-42B8-A718-BDC48D514A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D013B7-EC50-42B8-A718-BDC48D514A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D013B7-EC50-42B8-A718-BDC48D514A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D013B7-EC50-42B8-A718-BDC48D514A59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
